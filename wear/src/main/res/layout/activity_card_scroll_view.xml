@@ -1,0 +1,52 @@
+<android.support.wearable.view.BoxInsetLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/box_inset_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/light_off_background">
+
+    <android.support.wearable.view.CardScrollView
+        android:id="@+id/card_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_box="bottom">
+
+        <android.support.wearable.view.CardFrame
+            android:id="@+id/card_frame"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                android:id="@+id/preset" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:text="Preset 1"
+                android:textColor="#404040" android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/livingroom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/preset"
+                    android:text="Living Room"
+                    android:textColor="#404040"
+                    android:textSize="20sp" />
+
+                <ImageButton
+                    android:id="@+id/btn_onoff"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/button_off"
+                    android:nestedScrollingEnabled="false" />
+
+            </RelativeLayout>
+        </android.support.wearable.view.CardFrame>
+
+
+    </android.support.wearable.view.CardScrollView>
+</android.support.wearable.view.BoxInsetLayout>

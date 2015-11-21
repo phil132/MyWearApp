@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/srcdst"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="YUL - YYZ"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/dark_grey" />
+
+    <TextView
+        android:id="@+id/departure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Depart: 9:30 a.m."
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/dark_grey" />
+
+    <TextView
+        android:id="@+id/terminal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Terminal C, Gate 10"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#aaaaaa" />
+
+    <TextView
+        android:id="@+id/airline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="WestJet Airlines 2710"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#aaaaaa" />
+</LinearLayout>

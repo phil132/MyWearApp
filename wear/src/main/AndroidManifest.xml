@@ -12,7 +12,7 @@
         android:theme="@android:style/Theme.DeviceDefault">
         <activity
             android:name=".SimpleWearableListViewActivity"
-            android:label="Simple List Demo"
+            android:label="MyWearApp"
             android:taskAffinity="com.ocddevelopers.androidwearables.wearonlyapps.ListTask">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,6 +22,7 @@
         <activity android:name=".SimpleCardActivity"></activity>
         <activity android:name=".CardFragmentActivity"></activity>
         <activity android:name=".CardFrameActivity"></activity>
+        <activity android:name=".awListActivity"></activity>
 
 
 

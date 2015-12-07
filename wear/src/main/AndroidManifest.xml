@@ -23,6 +23,7 @@
         <activity android:name=".CardFragmentActivity"></activity>
         <activity android:name=".CardFrameActivity"></activity>
         <activity android:name=".awListActivity"></activity>
+        <activity android:name=".CircledImageActivity"></activity>
 
 
 

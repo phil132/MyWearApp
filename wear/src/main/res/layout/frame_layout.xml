@@ -35,4 +35,5 @@
         android:text="WestJet Airlines 2710"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:textColor="#aaaaaa" />
+
 </LinearLayout>

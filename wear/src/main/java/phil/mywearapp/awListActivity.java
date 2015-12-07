@@ -12,8 +12,8 @@ import android.support.wearable.view.WearableListView;
 public class awListActivity extends Activity
         implements WearableListView.ClickListener {
     // Sample dataset for the list
-    String[] elements = {"List Item 1", "List Item 2", "Mini"};
-    String[] distances = {"300", "400", "5000m"};
+    String[] elements = {"smart fortwo", "List Item 2", "Mini"};
+    String[] distances = {"300", "400 m", "5000m"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

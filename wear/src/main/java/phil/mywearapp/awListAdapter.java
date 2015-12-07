@@ -38,6 +38,8 @@ public class awListAdapter extends WearableListView.Adapter {
         }
     }
 
+
+
     // Create new views for list items
     // (invoked by the WearableListView's layout manager)
     @Override

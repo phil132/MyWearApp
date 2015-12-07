@@ -6,6 +6,7 @@ import android.graphics.Color;
 import android.support.wearable.view.CircledImageView;
 import android.support.wearable.view.WearableListView;
 import android.util.AttributeSet;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -15,6 +16,9 @@ import android.widget.TextView;
 public class WearableListItemLayout extends LinearLayout
         implements WearableListView.OnCenterProximityListener {
     private CircledImageView mCircle;
+
+   // private ImageView mCircledImage;
+
     private TextView mCar;
     private TextView mDistance;
     private final float mFadedTextAlpha;
@@ -49,6 +53,9 @@ public class WearableListItemLayout extends LinearLayout
     protected void onFinishInflate() {
         super.onFinishInflate();
         mCircle = (CircledImageView) findViewById(R.id.circle);
+
+       // mCircledImage = (ImageView) findViewById(R.id.circledimgage);
+
         mCar = (TextView) findViewById(R.id.car);
         mDistance = (TextView) findViewById(R.id.distance);
         mScalingUpAnimator = ObjectAnimator.ofFloat(mCircle, "circleRadius", mBigCircleRadius);

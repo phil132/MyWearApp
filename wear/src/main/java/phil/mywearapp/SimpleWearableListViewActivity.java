@@ -22,7 +22,7 @@ public class SimpleWearableListViewActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_wlistview);
-        mItems = new String[]{"Simple Card", "Custom Cards", "CardFrame", "AdvancedListView", "CircledImageView", "Item5"};
+        mItems = new String[]{"Simple Card", "Custom Cards", "CardFrame", "AdvancedListView", "CircledImageView", "DelayedConfirmationView"};
         mWearableListView = (WearableListView) findViewById(R.id.list);
         mWearableListView.setAdapter(new SampleAdapter(this, mItems));
         mWearableListView.setClickListener(mClickListener);
@@ -53,6 +53,10 @@ public class SimpleWearableListViewActivity extends Activity {
                     break;
                 case 4:
                     activityClass = CircledImageActivity.class;
+                    switchActivity(activityClass);
+                    break;
+                case 5:
+                    activityClass = DelayedConfirmationViewActivity.class;
                     switchActivity(activityClass);
                     break;
             }

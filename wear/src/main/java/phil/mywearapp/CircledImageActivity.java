@@ -15,9 +15,11 @@ import android.widget.Toast;
  */
 public class CircledImageActivity extends Activity {
 
-    private int mValue = 0;
+    private float mValue = 0f;
     private Handler handler1;
-    private  CircledImageView circledImageViewCancel;
+    private CircledImageView circledImageViewCancel;
+    private boolean tbusy = false;
+    private MyProgressThread myThread;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -25,7 +27,7 @@ public class CircledImageActivity extends Activity {
         setContentView(R.layout.activity_circled_image_view);
 
         // Cancel Circled Image View
-       circledImageViewCancel =
+        circledImageViewCancel =
                 (CircledImageView) findViewById(R.id.circledImageViewCancel);
 
         handler1 = new Handler();
@@ -34,13 +36,35 @@ public class CircledImageActivity extends Activity {
         circledImageViewCancel.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
-                new Thread(new Runnable() {
+                //new Thread(new Runnable() {
+                myThread =  new MyProgressThread();
+                new Thread(myThread).start();
+                Toast.makeText(getBaseContext(), "OK clicked", Toast.LENGTH_SHORT).show();
+            }
+
+        });
+
+                // OK Circled Image View
+        final CircledImageView circledImageViewOK =
+                        (CircledImageView) findViewById(R.id.circledImageViewOK);
+
+                circledImageViewOK.setOnClickListener(new View.OnClickListener() {
+                    public void onClick(View v) {
+                        //Toast.makeText(getBaseContext(), "OK clicked", Toast.LENGTH_SHORT).show();
+                    }
+                });
+            }
+
+    public class MyProgressThread implements Runnable {
+
+                    @Override
                     public void run() {
-                        while (mValue < 100000) {
-                            mValue += 1;
+
+                        while (mValue < 1000) {
+                            mValue += 0.01f;
 
                             try {
-                                Thread.sleep(200);
+                                Thread.sleep(100);
                             } catch (InterruptedException e) {
                                 e.printStackTrace();
                             }
@@ -54,21 +78,7 @@ public class CircledImageActivity extends Activity {
                             });
                         }
                     }
-                }).start();
-
-                //Toast.makeText(getBaseContext(), "Cancel clicked", Toast.LENGTH_SHORT).show();
             }
-        });
 
 
-        // OK Circled Image View
-        final CircledImageView circledImageViewOK =
-                (CircledImageView) findViewById(R.id.circledImageViewOK);
-
-        circledImageViewOK.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                //Toast.makeText(getBaseContext(), "OK clicked", Toast.LENGTH_SHORT).show();
-            }
-        });
-    }
 }

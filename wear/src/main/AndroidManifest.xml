@@ -24,7 +24,8 @@
         <activity android:name=".CardFrameActivity"></activity>
         <activity android:name=".awListActivity"></activity>
         <activity android:name=".CircledImageActivity"></activity>
-
+<activity android:name=".DelayedConfirmationViewActivity"></activity>
+        <activity android:name="android.support.wearable.activity.ConfirmationActivity"></activity>
 
 
     </application>
